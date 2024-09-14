@@ -39,7 +39,7 @@ try:
             while mode == "clock":
                 #Get current time, convert this to arrays of pixels
                 #And then set the pixels in the UHHD matrix, then show.
-                displayclock.update()
+                displayclock.update(current_time, seconds)
 
                 time.sleep(0.1) #No point updating any more frequently than 10 times per second.
 
@@ -52,7 +52,7 @@ try:
             while mode == "date":
                 #Get current date, convert day, month and weekday into matrix of pixels
                 #And then set the pixels in the UHHD matrix, then show.
-                displaycal.update()
+                displaycal.update(current_date)
 
                 time.sleep(60) #No point updating date as frequently as we would time, only update every 1 minute.
 
@@ -66,7 +66,7 @@ try:
             while mode == "binary":
                 #Get current time, convert this to arrays of pixels
                 #And then set the pixels in the UHHD matrix, then show.
-                displaybin.update()
+                displaybin.update(current_time, seconds)
 
                 time.sleep(0.1) #No point updating any more frequently than 10 times per second.
                 

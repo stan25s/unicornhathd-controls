@@ -60,7 +60,7 @@ def get_time_as_pixel_list(h, m):
                             unicornhathd.set_pixel(x, y, h2a[x-1][y-5] * 255, h2a[x-1][y-5] * 255, h2a[x-1][y-5] * 255)
     
 
-def update():
+def update(current_time, seconds):
     #Get current time, convert this to arrays of pixels
     #And then set the pixels in the UHHD matrix, then show.
     now = datetime.now()

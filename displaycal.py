@@ -146,7 +146,7 @@ def get_char_pixels(c):
     else:
         return [[1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1]]
 
-def update(): 
+def update(current_date): 
     #Get current time, convert this to arrays of pixels
                 #And then set the pixels in the UHHD matrix, then show.
                 now = datetime.now()

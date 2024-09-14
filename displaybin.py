@@ -40,20 +40,12 @@ def set_bin_time_pixels(h, m, s):
         unicornhathd.set_pixel(x, 5, 55 + (200 * int(sec_bin[index])), 55 + (200 * int(sec_bin[index])), 55 + (200 * int(sec_bin[index])))
         index = index + 1
 
-def update():
+def update(current_time, seconds):
     now = datetime.now()
                 
-    if current_date != now.strftime("%d:%m"):
-        #only update the display if the time has changed since previous check
-        current_date = now.strftime("%d:%m")
-        current_day = now.strftime("%d")
-        current_month = now.strftime("%m")
-        current_day_of_week = now.strftime("%w")
-        #print("Current Time = ", current_time)
-                    
+    if current_time != now.strftime("%H:%M") & seconds != now.strftime("%S"): #only update the display if the time has changed since the previous check
+        #Note that this is still updating the minute and hour every second, if I could separate out Hour, Min, Sec, then only the relevant pixels would need to be updated.
         unicornhathd.clear()
-                    
-        #set_bin_date_pixels(current_day, current_month, current_day_of_week)
                 
         current_seconds = now.strftime("%S")
         seconds_int = int(current_seconds)
