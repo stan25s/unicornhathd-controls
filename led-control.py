@@ -28,6 +28,8 @@ unicornhathd.brightness = 0.6
      
 #def set_bin_date_pixels(d, m, wd):
     
+# TODO - set the time or date within the while loops for each mode in this file and then pass the value to the relevant update() function.
+    
 
 try:
     while True:
