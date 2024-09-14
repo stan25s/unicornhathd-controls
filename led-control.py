@@ -25,8 +25,6 @@ current_time = ""
 current_date = ""
 seconds = 0
 unicornhathd.brightness = 0.6
-
-
      
 #def set_bin_date_pixels(d, m, wd):
     
